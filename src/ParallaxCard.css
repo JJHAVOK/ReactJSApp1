@@ -1,0 +1,58 @@
+/* Container for the card */
+.parallax-card {
+  width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Light gradient background */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* CRITICAL: Smooth transitions for all properties */
+  transition: all 0.25s ease-out; 
+  /* CRITICAL: Establishes a 3D context */
+  transform-style: preserve-3d;
+  /* Default/initial state for shadow */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  will-change: transform, box-shadow; /* Optimization for browsers */
+}
+
+/* Inner content area */
+.card-content {
+  text-align: center;
+  /* CRITICAL: Smooth transition for the inner parallax shift */
+  transition: all 0.25s ease-out;
+  /* Ensures inner content stays in 3D space relative to the card */
+  transform-style: preserve-3d; 
+}
+
+/* Enhancing the content */
+.card-title {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+  /* A small translation in Z-space makes it appear closer (the "impressive" part) */
+  transform: translateZ(30px); 
+}
+
+.card-text {
+  color: #666;
+  margin-bottom: 25px;
+  transform: translateZ(10px);
+}
+
+.card-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transform: translateZ(20px); /* Lift button for focus */
+  transition: background-color 0.2s;
+}
+
+.card-button:hover {
+  background-color: #0056b3;
+}
