@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://jjhavok.github.io/ReactJSApp1/",
-  "type": "module",
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -12,9 +15,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "dependencies": {
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+  "eslintConfig": {
+    // ...
+  },
+  "browserslist": {
+    // ...
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
