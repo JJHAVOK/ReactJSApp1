@@ -15,12 +15,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "eslintConfig": {
-    // ...
-  },
-  "browserslist": {
-    // ...
-  },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@types/react": "^19.1.16",
